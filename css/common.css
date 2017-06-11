@@ -1,3 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+li {
+  list-style: none;
+}
+
+a {
+	color: #333;
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+.w1196 {
+  width: 1196px;
+  margin: 0 auto;
+}
+
+#headerbox {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #eee;
+  background-color: #f7f7f7;
+  line-height: 30px;
+}
+#headerbox .header {
+  color: #666;
+  font-size: 12px;
+}
+#headerbox .header p {
+  float: left;
+  height: 30px;
+}
+#headerbox ul {
+  float: right;
+}
+#headerbox ul li {
+  float: left;
+  height: 30px;
+  position: relative;
+}
+#headerbox ul li a {
+  height: 12px;
+  color: #666;
+  padding: 0 20px;
+}
+#headerbox ul li s {
+  top: 9px;
+  left: -2px;
+  width: 0;
+  height: 12px;
+  border-left: 1px solid #ddd;
+  position: absolute;
+  overflow: hidden;
+}
+#headerbox ul li em {
+  top: 12px;
+  right: 8px;
+  width: 9px;
+  height: 5px;
+  overflow: hidden;
+  position: absolute;
+  background: url(../img/jingling-1.png) no-repeat 100% -700px;
+  transition: all 0.5s;
+}
+#headerbox ul li em:hover {
+  transform: rotateZ(180deg);
+}
+
+#fixbox {
+  width: 36px;
+  height: 100%;
+  background-color: #e6e6e6;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
 
 /*# sourceMappingURL=common.css.map */

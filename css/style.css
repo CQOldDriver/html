@@ -1,0 +1,92 @@
+#titlebox{width: 100%;height: 110px;}
+#titlebox .logo{float: left;padding: 25px 0;width: 370px;}
+#titlebox .logo a{display:block;width: 260px;height: 60px;background: url(../img/login-logo.png) no-repeat;}
+#titlebox .search{float: left;margin-top: 36px;}
+#titlebox .search input{float: left;border: 2px solid red;width: 458px;height: 32px;}
+#titlebox .search button{float: left;height: 36px;width: 78px;background-color: red;border: none;}
+#titlebox .shopcar{text-align: center;width: 128px;height: 34px;float: right;margin:35px 39px 0 0;border: 1px solid red;}
+#titlebox .shopcar em{margin:8px 0 0 8px;float:left;display: block;width: 17px;height: 15px;background: url(../img/jingling-1.png) no-repeat -103px -868px;}
+#titlebox .shopcar i{margin:13px 10px 0 0;float: right;display: block;width: 4px;height: 7px;background: url(../img/jingling-1.png) no-repeat -103px -890px;}
+#titlebox .shopcar span{line-height: 34px;font-size: 12px;}
+#titlebox .hotword{float: left;width: 450px;color: #999;font-size: 12px;}
+#titlebox .hotword a{color: #999;}
+#titlebox .hotword a:hover{color: red;}
+
+#navbox{width: 100%;height:38px;line-height:38px;border-bottom: 2px solid red;}
+#navbox .nav{position: relative;}
+#navbox ul{float: left;}
+#navbox ul .all{position:relative;color: white;width: 210px;background: red;text-align: center;}
+#navbox ul .all i{top:16px;right:14px;position:absolute;width: 12px;height: 7px;background: url(../img/jingling-2.png) no-repeat 0 -420px;}
+#navbox ul li{float: left;}
+#navbox ul li a{padding: 0 25px;color: black;}
+#navbox ul li a:hover{color: red;}
+#navbox .item{z-index:5;font-size:14px;width: 208px;height: 518px;position: absolute;border: 1px solid #ddd;border-top:none ;top: 40px;}
+#navbox .item .product{width: 208px;height: 47px;line-height: 51px;position: relative;}
+#navbox .item b{width: 21px;height: 21px;display: inline-block;vertical-align: middle;margin: 15px;background: url(../img/jingling-2.png) no-repeat;}
+#navbox .item .jinkou_bg{background-position: 0 -274px;}
+#navbox .item .xiuxian_bg{background-position: 0 -592px;}
+#navbox .item .liangyou_bg{background-position: 0 -315px;}
+#navbox .item .jiuyin_bg{background-position: 0 -294px;}
+#navbox .item .muying_bg{background-position: 0 -357px;}
+#navbox .item .meirong_bg{background-position: 0 -337px;}
+#navbox .item .jiating_bg{background-position: 0 -211px;}
+#navbox .item .jiaju_bg{background-position: 0 -253px;}
+#navbox .item .fushi_bg{background-position: 0 -400px;}
+#navbox .item .jiadian_bg{background-position: 0 -233px;}
+#navbox .item .shengxian_bg{background-position: 0 -380px;}
+#navbox .item .product i{width: 7px;height: 12px;display: inline-block;position: absolute;right: 10px;top: 20px;background: url(../img/jingling-1.png) no-repeat 0 -666px;}
+
+#banner{width: 760px;height: 510px;padding-left:252px;float: left;}
+#banner .lunbo1{width: 760px;height: 400px;overflow: hidden;position: relative;}
+#banner .lunbo1 .page{text-align: center;height:30px; width:760px;position: absolute; bottom: 0;}
+#banner .lunbo1 .pages{overflow:hidden;display:inline-block;}
+#banner .lunbo1 .pages div{color:white;cursor:default;line-height:20px;text-align:center;width:20px;height: 20px;background: #ccc;float:left; margin:5px; border-radius: 10px;}
+#banner .lunbo1 .pages div.current{background-color:red;}
+#banner .lunbo1 li{float: left;}
+#banner .lunbo1 ul{position: absolute;top: 0;left: 0;}
+.prev1, .next1 {width: 30px;height: 60px;position: absolute;top:0;bottom: 0;margin:auto;cursor: pointer;}	
+.prev1{background: url(../img/jingling-1.png) no-repeat -30px -774px;}
+.next1{background: url(../img/jingling-1.png) no-repeat -30px -844px;right: 0;}
+#banner .lunbo2 {overflow: hidden;width:760px;height: 119px; position: relative;}
+#banner .lunbo2 ul{top:0;left:0;position: absolute;}
+#banner .lunbo2 li{float: left;padding-right:1px;}
+.prev2, .next2 {width: 30px;height: 60px;position: absolute;top:0;bottom: 0;margin:auto;cursor: pointer;}
+.prev2{background: url(../img/jingling-1.png) no-repeat -30px -774px;}	
+.next2{background: url(../img/jingling-1.png) no-repeat -30px -844px;right: 0;}
+
+#news{width: 230px;height: 519px;float: left;}
+#news .news_info{font-size: 14px;color:#666;width: 228;height: 268px;border: 1px solid #ddd;}
+#news .news_info p{float: left;width: 90%;}
+#news .news_info p a{float:right;}
+#news .news_info a:hover{color: red;}
+#news .news_info div{float: left;}
+#news .news_info div a{display:block;height: 20px;margin: 10px 0;}
+#news .news_show{margin-top: 5px;}
+
+#hotbox{width: 100%;height: 380px;overflow: hidden;}
+#hotbox .hot{margin-top: 20px;height: 361px;position: relative;}
+#hotbox .hot s{position: absolute;bottom:0;left:10px;width: 1181px;display: block;height: 2px;background-color: #ccc}
+#hotbox .hot .title{height: 40px;}
+#hotbox .title a{float: right}
+#hotbox h1{display:inline-block;float:left;width: 205px;height: 40px;font-size: 20px;color: red;font-weight: normal;margin: 5px;}
+#hotbox h1 i{display: inline-block;width: 30px;height: 30px;float: left;background: url(../img/jingling-1.png) no-repeat 0 -914px;}
+#hotbox h1 span{color: #666;font-size: 12px}
+#hotbox .hot .good{width: 1194px;height: 340px;position: relative;}
+#hotbox .product_1{border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 207px;height: 338px;margin-left: 10px;position: absolute;}
+#hotbox .product_1 h2{font-size: 16px;height: 50px;}
+#hotbox .product_1 h2 a:hover{color: red;}
+#hotbox .product_1 span{font-size: 12px;display: block;width: 85px;height: 20px;line-height:20px;color:white;background: url(../img/hot-bg.jpg) no-repeat;}
+#hotbox .product_1 .price{margin-top: 10px;color: red;}
+#hotbox .product_1 .price a{font-size: 14px;margin-left: 20px;}
+#hotbox .product_2{width:980px ;height: 338px;position: absolute;right: 0;}
+#hotbox .product_2 li{border-top: 1px solid #ccc;border-left: 1px solid #ccc;float:left;width: 219px;height: 144px;padding: 12px;position: relative}
+#hotbox .product_2 li h2 a{font-size: 16px;font-weight: normal;}
+#hotbox .product_2 li h2 a:hover{color: red;}
+#hotbox .product_2 li h2{line-height: 28px;height: 28px;width: 218px;margin-bottom: 5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;z-index: 2;position: relative;}
+#hotbox .product_2 span{text-align:center;font-size: 12px;display: inline-block;width: 71px;height: 20px;line-height:20px;color:white;background: url(../img/hot-bg.jpg) no-repeat;}
+#hotbox .product_2 b{display: block;padding: 20px 0;color: red;}
+#hotbox .product_2 .a_buy{font-size: 12px}
+#hotbox .product_2 a img{position: absolute;right:0;bottom:8px;width: 120px;height: 120px;}
+
+#showbox{width: 1200px;height: 210px;margin: 0 auto;overflow: hidden;margin-top: 20px;}
+#showbox li{float: left;overflow: hidden;}
