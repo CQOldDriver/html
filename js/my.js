@@ -48,10 +48,12 @@ $(function(){
 		nextIndex = $(this).index() + 1;
 		move();
 	})
-//	$(".pages div").click(function(){
-//				nextIndex = $(this).index() + 1;
-//				move();
-//			});
+
+//$(".pages div").mouseover(function(){
+//	nextIndex = $(this).index() + 1;
+//		move();
+//})
+//		
 	
 	$(".prev1").click(function(){
 		if(!isMoving){
@@ -166,3 +168,33 @@ $(function(){
 //		nextIndex++;
 //	}
 //});
+
+/////////////////////////轮播3
+$(function(){
+	var $uls = $(".lunbo3 ul"),
+		len = $uls.length,
+		ulWidth = $uls.outerWidth(),
+		timer = null,
+		currentIndex = 0,
+		nextIndex = 1;
+		
+	console.log(len); //2
+	
+	$(".lunbo3").css({
+				width : len * ulWidth,
+				left : 0
+			});
+	
+	$("#floor_one .title li a").mouseover(function(){
+		console.log(this);
+		nextIndex = $(this).parents("li").index();
+		move();
+	});
+	
+
+	
+	function move(){
+		var _left = -1 * ulWidth * nextIndex;
+		$(".lunbo3").stop().animate({left:_left});
+	}
+});

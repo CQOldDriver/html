@@ -12,19 +12,11 @@
 		</script>
 		<script type="text/javascript">
 			$(function(){
-				$.cookie("loginuser","test");
-				//$("#header").load("/html/headertest.html")
-				$.ajax("/html/headertest.html").then(function(data){
-					console.log(data);
-					var user = $.cookie("loginuser");
-					if(user){
-						data = $(data).filter(".before_login").hide().end()
-							   .filter(".after_login").show().find(".username").text(user).end().end();
-					}
-					$("#header").append(data);
-				});
-
-
+				$("#header").load("/html/include/header.html");
+				
+//				$.ajax("/html/include/header.html").then(function(data){
+//					console.log(data);
+//				});
 			});
 		</script>
 	</body>
