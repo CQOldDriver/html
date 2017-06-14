@@ -4,7 +4,7 @@
 #titlebox .search{float: left;margin-top: 36px;}
 #titlebox .search input{float: left;border: 2px solid red;width: 458px;height: 32px;}
 #titlebox .search button{float: left;height: 36px;width: 78px;background-color: red;border: none;}
-#titlebox .shopcar{text-align: center;width: 128px;height: 34px;float: right;margin:35px 39px 0 0;border: 1px solid red;}
+#titlebox .shopcar{display:block;text-align: center;width: 128px;height: 34px;float: right;margin:35px 39px 0 0;border: 1px solid red;}
 #titlebox .shopcar em{margin:8px 0 0 8px;float:left;display: block;width: 17px;height: 15px;background: url(../img/jingling-1.png) no-repeat -103px -868px;}
 #titlebox .shopcar i{margin:13px 10px 0 0;float: right;display: block;width: 4px;height: 7px;background: url(../img/jingling-1.png) no-repeat -103px -890px;}
 #titlebox .shopcar span{line-height: 34px;font-size: 12px;}
@@ -35,6 +35,7 @@
 #navbox .item .jiadian_bg{background-position: 0 -233px;}
 #navbox .item .shengxian_bg{background-position: 0 -380px;}
 #navbox .item .product i{width: 7px;height: 12px;display: inline-block;position: absolute;right: 10px;top: 20px;background: url(../img/jingling-1.png) no-repeat 0 -666px;}
+#navbox .item .jiadian {display: none;height: 518px;zoom: 1;position: absolute;left: 208px;top: 2px;width: 991px;z-index: 11;border-bottom: 1px solid #f03838;background: #f7f7f7;}
 
 #banner{width: 760px;height: 510px;padding-left:252px;float: left;}
 #banner .lunbo1{width: 760px;height: 400px;overflow: hidden;position: relative;}

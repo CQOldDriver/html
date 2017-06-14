@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.title, .body, .footer {clear: both; width: 1220px;}
+			.title div, .body div {width: 150px;height: 35px;line-height: 35px; border: 1px solid; float:left;}
+			.body div{height: 100px;}
+			.footer{text-align: right;}
+			.amount {width: 30px;}
+			.minus, .add {display: inline-block; width: 30px; text-align: center; border:1px solid; height:20px; line-height: 20px; cursor: default;}
+			img{width: 100px;height: 80px;}
+		</style>
+	</head>
+	<body>
+		<h1>购物车</h1>
+		
+		<div id="container">
+			<div class="title">
+				<div><label><input type="checkbox" class="ck_all">全选</label></div>
+				<div>图片</div>
+				<div>名称</div>
+				<div>价格</div>
+				<div>数量</div>
+				<div>小计</div>
+				<div>操作</div>
+			</div>
+			<div class="footer">
+				合计：<span class="total">0.00</span> 元
+			</div>
+		</div>
+		
+		<script type="text/html" id="cart_template">
+			<% for (var i = 0, len = products.length; i < len; i++) { 
+				var prod = products[i];
+			%>
+			<div class="body">
+				<div><input type="checkbox" class="ck_product"></div>
+				<div class="src"><img src=<%= prod.src %>></div>
+				<div class="name"><%= prod.name %></div>
+				<div class="price"><%= prod.price %></div>
+				<div><span class="minus">-</span><input type="text" class="amount" value="<%= prod.amount %>"><span class="add">+</span></div>
+				<div class="sub"><%= prod.price * prod.amount %></div>
+				<div><a href="http://www.baidu.com">删除</a></div>
+			</div>
+			<% } %>
+		</script>
+	
+		
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/template-native.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.cookie.json = true;
+				var _products = $.cookie("products") || [];
+
+				var data = {
+					products : _products
+				};
+				var html = template("cart_template", data);
+				$(html).insertBefore(".footer").filter(".body").each(function(index, element){
+					$(element).data("product", _products[index]);
+				});
+				
+				$(".ck_all").click(function(){
+				
+					var status = $(this).prop("checked");
+					
+					$(".ck_product").prop("checked", status);
+					
+					calcTotal();
+				});
+				
+				$(".body :checkbox").click(function(){
+				
+						calcTotal();
+						
+						if ($(".body :checkbox:checked").length === _products.length) {
+							$(".ck_all").prop("checked", true);
+						} else{
+							$(".ck_all").prop("checked", false);
+						}
+					});
+				
+				$("#container").delegate(".add,.minus", "click", function(){
+
+					var $row = $(this).parents(".body");
+					var _product = $row.data("product");
+					console.log(_product);
+					if ($(this).is(".add")){ 
+						++_product.amount;
+					} else{
+					if (_product.amount <= 1)
+						return;
+					--_product.amount;
+					}
+					$row.find(".amount").val(_product.amount);
+				
+					$row.children(".sub").text((_product.price * _product.amount).toFixed(2));
+				
+					calcTotal();
+				
+					$.cookie("products", _products, {expires:7});
+				});
+				
+				$("#container").on("blur", ".amount", function(){
+				var _product = $(this).parents(".body").data("product");
+				var reg = /^[1-9]\d*$/;
+				if (!reg.test($(this).val())) {
+					$(this).val(_product.amount);
+					return;
+				}
+				// 输入数量正确
+				_product.amount = $(this).val();
+				// 修改小计显示
+				var ap = _product.price * _product.amount;
+				$(this).parents(".body").children(".sub").text(ap.toFixed(2));
+				console.log(typeof ap);
+				// 合计
+				calcTotal();
+				// 修改 cookie
+				$.cookie("products", _products, {expires:7});
+			});
+				
+				$("#container").on("click", "a", function(e){
+				e.preventDefault();
+				// 删除超级链接所在行
+				var $row = $(this).parents(".body");
+				// 删除的商品对象
+				var _product = $row.data("product");
+				// 找出在数组中的下标
+				var index = $.inArray(_product, _products);
+				// 从数组中删除 index 处元素
+				_products.splice(index, 1);
+				// 从dom结构中删除行
+				$row.remove();
+				// 从 cookie 中删除当前行的数据
+				$.cookie("products", _products, {expires:7});
+			});
+				
+				function calcTotal() {
+				var _total = 0;
+				$(".body input:checked").each(function(index, element){
+					_total += Number($(element).parents(".body").children(".sub").text());
+				});
+				$(".total").text(_total.toFixed(2));
+			}
+				
+			});
+		</script>
+	</body>
+</html>

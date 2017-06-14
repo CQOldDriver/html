@@ -177,8 +177,6 @@ $(function(){
 		timer = null,
 		currentIndex = 0,
 		nextIndex = 1;
-		
-	console.log(len); //2
 	
 	$(".lunbo3").css({
 				width : len * ulWidth,

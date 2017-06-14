@@ -11,7 +11,7 @@
 	</div>
 	<div id="loginbox">
 		<img src="../img/login-img.gif"/>
-		<form>
+		<div id="form">
 			<div class="title">
 				<b>用户登录</b>
 				<span>没有账号？<a href="register.html">免费注册</a></span>
@@ -31,8 +31,45 @@
 				</label>
 				<a href="" style="float: right;">忘记密码?</a>
 			</div>
-			<input type="submit" value="登录"/>
-		</form>
+			<input type="submit" value="登录" id="btn"/>
+		</div>
 	</div>
+	<script src="../js/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				$.cookie.json = true;
+				var _users = $.cookie("users") || [];
+				var username = $(".name").val(),
+					userpsd = $(".psd").val();
+					
+				
+				for(var i=0,len=_users.length;i<len;i++){
+//					console.log(typeof username);
+//					console.log(typeof _users[i].name);
+//					console.log(typeof userpsd);
+//					console.log(typeof _users[i].psd);	
+					if(username == _users[i].name && userpsd == _users[i].psd){
+						var _loginuser = $.cookie("loginuser") || [];
+						var loginuser = {
+							name: username
+						}
+						console.log(_loginuser,username);
+						_loginuser.push(loginuser);
+						$.cookie("loginuser",_loginuser,{expires:7})
+						location = "INDEX.html";
+						return;
+					}
+				}
+				alert("用户名或密码错误");
+				
+			});
+			
+			
+		});
+		
+		
+	</script>
 </body>
 </html>

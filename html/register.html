@@ -3,8 +3,84 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<style type="text/css">
+			#registerbox{
+				width: 300px;
+				margin: 30px auto;
+			}
+			h2{
+				text-align: center;
+			}
+			input{
+				float: right;
+			}
+			span{
+				float: left;
+				width: 111px;
+			}
+		</style>
 	</head>
 	<body>
+		<div id="headerbox">
+			<div class="header">
+				<div class="w1196">
+					<p>送至</p>
+					<ul>
+						<li>您好，欢迎来到三江!</li>
+						<li><a href="login.html" style="color: red;">登录</a></li>
+						<li><a href="">注册</a></li>
+						<li><s></s><a href="">我的订单</a></li>
+						<li><s></s><a href="">我的三江</a><em></em></li>
+						<li><s></s><a href="">口袋三江</a><em></em></li>
+						<li><s></s><a href="">企业团购</a></li>
+						<li><s></s><a href="">客户服务</a></li>
+						<li><s></s><a href="">网站导航</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
 		
+		<div id="registerbox">
+			<h2>用户注册</h2>
+			<span>用户名:</span><input type="text" id="registername" placeholder="请输入用户名" /><br />
+			<span style="margin-left: 14px;">密码:</span><input type="password" id="registerpsd"/>
+			<button id="btn">注册</button>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					var username =  $(this).parents("#registerbox").children("#registername").val(),
+						userpsd =  $(this).parents("#registerbox").children("#registerpsd").val(),
+						user = {
+							name : username,
+							psd : userpsd
+						}
+					
+					$.cookie.json = true;
+					var _users = $.cookie("users") || [];
+				//	console.log(_users);
+					var _index = indexOf(user.name,_users);
+					if(_index === -1){
+						_users.push(user);
+						alert("注册成功");
+					}else{
+						alert("用户名已存在");
+					}
+					$.cookie("users",_users,{expires:7});
+				//	console.log($.cookie("users"));
+				});
+				
+				function indexOf(name,users){
+					for (var i = 0, len = users.length; i < len; i++) {
+					if (name === users[i].name)
+							return i;
+					}
+							return -1;
+				}
+			});
+		</script>
 	</body>
 </html>

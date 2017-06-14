@@ -28,6 +28,7 @@ img {
   .header{
       color: #666;
       font-size: 12px;     
+      position: relative;
       p{
           float: left;
           height: 30px;
@@ -62,15 +63,13 @@ img {
               position: absolute;
               background: url(../img/jingling-1.png) no-repeat 100% -700px;
               transition: all 0.5s;
-             
-          }
-          em:hover{
-               transform: rotateZ(180deg);
           }
       }
+      li:hover em{
+               transform: rotateZ(180deg);
+          }
   }
 }
-
 #fixbox{
     width: 36px;
     height: 100%;

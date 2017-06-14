@@ -3,62 +3,69 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="/project/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/> <!--/project/css/common.css-->
 		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	</head>
 	<body>
-		
-		<div id="headerbox">
-			<div class="header">
-				<div class="w1196">
-					<p>送至</p>
-					<ul>
-						<li>您好，欢迎来到三江!</li>
-						<li><a href="login.html" style="color: red;">登录</a></li>
-						<li><a href="">注册</a></li>
-						<li><s></s><a href="">我的订单</a></li>
-						<li><s></s><a href="">我的三江</a><em></em></li>
-						<li><s></s><a href="">口袋三江</a><em></em></li>
-						<li><s></s><a href="">企业团购</a></li>
-						<li><s></s><a href="">客户服务</a></li>
-						<li><s></s><a href="">网站导航</a></li>
-					</ul>
+			<div id="headerbox">
+				<div class="header">
+					<div class="w1196">
+						<p>送至</p>
+						<ul>
+							<li>您好，欢迎来到三江!</li>
+							<li><a href="login.html" style="color: red;" class="login_name">登录</a></li>
+							<li><a href="register.html">注册</a></li>
+							<li><s></s><a href="">我的订单</a></li>
+							<li><s></s><a href="">我的三江</a><em></em></li>
+							<li><s></s><a href="">口袋三江</a><em></em></li>
+							<li><s></s><a href="">企业团购</a></li>
+							<li><s></s><a href="">客户服务</a></li>
+							<li><s></s><a href="">网站导航</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-		</div>
+				
+			</div>			
+			
+			<div id="titlebox">
+				<div class="title">
+					<div class="w1196">
+						<div class="logo">
+							<a href="INDEX.html"></a>
+						</div>
+						<div class="search">
+							<form>
+								<input type="text" placeholder="三江购物东北大米" />
+								<button>搜索</button>
+							</form>
+						</div>
+						<a href="shopcar.html" class="shopcar">
+							<em></em>
+							<span>我的购物车</span>
+							<i></i>
+						</a>
+						<div class="hotword">
+							热门搜索: <a href="" style="color: red;">三江购物</a>
+									<a href="">蒙牛</a>
+									<a href="">大米</a>
+									<a href="">伊利</a>
+									<a href="">昆仑山</a>
+									<a href="">可乐</a>
+						</div>
+					</div>
+				</div>
+			</div>			
+		
+		
+
+		
+		
 		
 		<div id="fixbox">
 			
 		</div>
 		
-		<div id="titlebox">
-			<div class="title">
-				<div class="w1196">
-					<div class="logo">
-						<a href="#"></a>
-					</div>
-					<div class="search">
-						<form>
-							<input type="text" placeholder="三江购物东北大米" />
-							<button>搜索</button>
-						</form>
-					</div>
-					<div class="shopcar">
-						<em></em>
-						<span>我的购物车</span>
-						<i></i>
-					</div>
-					<div class="hotword">
-						热门搜索: <a href="" style="color: red;">三江购物</a>
-								<a href="">蒙牛</a>
-								<a href="">大米</a>
-								<a href="">伊利</a>
-								<a href="">昆仑山</a>
-								<a href="">可乐</a>
-					</div>
-				</div>
-			</div>
-		</div>
+
 		
 		<div id="navbox">
 			<div class="nav">
@@ -126,6 +133,9 @@
 								<b class="shengxian_bg"></b>
 								<a href="">生鲜超市</a>
 								<i></i>
+						</div>
+						<div class="jiadian">
+							XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 						</div>
 					</div>
 				</div>
@@ -203,65 +213,25 @@
 						</div>
 						<a href=""><img src="../img/hot/hot-1.jpg" width="200" height="200"/></a>
 					</div>
+					
+					<script type="text/html" id="goodproduct_template">
+						<% for (var i = 0, len = goodproducts.length; i < len; i++) { 
+							var prod = goodproducts[i];
+						%>
+							<li>
+								<h2><a href=""><%= prod.name %></a></h2>
+								<span><%= prod.title %></span>
+								<b><%= prod.price %></b>
+								<a href="" class="a_buy">点击购买</a>
+								<a href=""><img src="<%= prod.src %>"/></a>
+							</li>
+						
+						<% } %>
+						
+					</script>
+					
 					<div class="product_2">
-						<ul>
-							<li>
-								<h2><a href="">雪花醇麦拉罐啤酒10度500ml*4</a></h2>
-								<span>跌破10元</span>
-								<b>￥10.50</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-2.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">农夫山泉量贩装水550ml*12</a></h2>
-								<span>好水好天然</span>
-								<b>￥14.70</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-3.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">美嘉宝电子灭蚊拍MJB-604</a></h2>
-								<span>蚊子全都走</span>
-								<b>￥27.90</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-4.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">椰树椰汁植物蛋白饮料245ml</a></h2>
-								<span>植物蛋白不</span>
-								<b>￥3.69</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-5.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">百事可乐330ml*8瓶</a></h2>
-								<span>清凉超值量贩</span>
-								<b>￥13.80</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-6.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">厨邦美味鲜特级酿造酱油1.68L</a></h2>
-								<span>认准厨邦美味鲜</span>
-								<b>￥22.90</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-7.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">盘锦蟹田大米10kg</a></h2>
-								<span>清香蟹田大米</span>
-								<b>￥79.80</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-8.jpg"/></a>
-							</li>
-							<li>
-								<h2><a href="">维达超韧卷筒卫生纸4层(V4688)180g*10卷</a></h2>
-								<span>超韧厚实湿水不</span>
-								<b>￥39.60</b>
-								<a href="" class="a_buy">点击购买</a>
-								<a href=""><img src="../img/hot/hot-9.jpg"/></a>
-							</li>
-						</ul>
+						<ul></ul>
 					</div>
 				</div>
 				<s></s>
@@ -294,88 +264,23 @@
 			<div class="left"></div>
 			<div class="center">
 				<div class="lunbo3">
-					<ul>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-2.jpg"/>
-							</a>
-							<h2><a href="">香菇210-230g/份</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-3.jpg"/>
-							</a>
-							<h2><a href="">青菜290-310g/盒</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-4.jpg"/>
-							</a>
-							<h2><a href="">红萝卜500-550g/份</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-5.jpg"/>
-							</a>
-							<h2><a href="">萝卜单只800-900g</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-6.jpg"/>
-							</a>
-							<h2><a href="">荷兰豆约200-220g/份</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-7.jpg"/>
-							</a>
-							<h2><a href="">土豆约800-900g/份</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-8.jpg"/>
-							</a>
-							<h2><a href="">西红柿350-450g/份</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="img_box">
-								<img src="../img/floor1/floor-9.jpg"/>
-							</a>
-							<h2><a href="">新鲜蒜头380-400g/份</a></h2>
-							<div class="price">
-								<b>￥7.50</b>
-								<a href="#" class="buy-btn"></a>
-							</div>
-						</li>
-					</ul>
+					<script type="text/html" id="shengxian_template">
+						<% for(var i = 0,len = shengxian.length;i < len ; i++){ 
+							var prod = shengxian[i];
+						%>
+							<li>
+								<a href="#" class="img_box">
+									<img src="<%= prod.src %>"/>
+								</a>
+								<h2><a href=""><%= prod.name %></a></h2>
+								<div class="price">
+									<b><%= prod.price %></b>
+									<a href="javascript:void(0);" class="buy-btn"></a>
+								</div>
+							</li>							
+						<% } %>
+					</script>
+					<ul class="shengxian_ul"></ul>
 					<ul>
 						<li>
 							<a href="#" class="img_box">
@@ -384,7 +289,7 @@
 							<h2><a href="">精装红富士900-1000克/份</a></h2>
 							<div class="price">
 								<b>￥13.20</b>
-								<a href="#" class="buy-btn"></a>
+								<a href="javascript:void(0);" class="buy-btn"></a>
 							</div>
 						</li>
 						<li>
@@ -394,7 +299,7 @@
 							<h2><a href="">赣南脐橙750-850g/份</a></h2>
 							<div class="price">
 								<b>￥12.20</b>
-								<a href="#" class="buy-btn"></a>
+								<a href="javascript:void(0);" class="buy-btn"></a>
 							</div>
 						</li>
 					</ul>
@@ -410,8 +315,54 @@
 			</div>
 		</div>
 		
-		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
-		<script type="text/javascript" src="../js/my.js"></script>
 		
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="../js/my.js"></script>
+		<script type="text/javascript" src="../js/template-native.js"></script>
+		<script type="text/javascript" src="../js/getJSON.js"></script>
+		<script type="text/javascript" src="../js/shopcar.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#navbox .item div:nth-child(10)").hover(function(){
+					$(this).parent().children(".jiadian").show();
+					$(this).css({
+						background: "red"
+					});
+					$(this).children("a").css({
+						color: "white"
+					});
+					$(this).children("b").css({
+						backgroundPositionY: "-24px"
+					});
+				},function(){
+					$(this).parent().children(".jiadian").hide();
+					$(this).css({
+						background: "white"
+					});
+					$(this).children("a").css({
+						color: "black"
+					});
+					$(this).children("b").css({
+						backgroundPositionY: "-232px"
+					});
+				}).trigger("mouseleave");
+				$("#navbox .item div:nth-child(12)").hover(function(){
+					$(this).show();
+				},function(){
+					$(this).hide();
+				}).trigger("mouseleave");
+			});
+			
+			$(function(){
+				$.cookie.json = true;
+				var login_test = $.cookie("loginuser") || [];
+				var len = login_test.length;
+				$(".login_name").text(login_test[len-1].name);
+			});
+		
+			
+	
+		</script>
 	</body>
 </html>

@@ -8,7 +8,7 @@ li {
 }
 
 a {
-	color: #333;
+  color: #333;
   text-decoration: none;
 }
 
@@ -31,6 +31,7 @@ img {
 #headerbox .header {
   color: #666;
   font-size: 12px;
+  position: relative;
 }
 #headerbox .header p {
   float: left;
@@ -68,7 +69,7 @@ img {
   background: url(../img/jingling-1.png) no-repeat 100% -700px;
   transition: all 0.5s;
 }
-#headerbox ul li em:hover {
+#headerbox ul li:hover em {
   transform: rotateZ(180deg);
 }
 
