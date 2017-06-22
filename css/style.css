@@ -92,8 +92,8 @@
 #showbox{width: 1200px;height: 210px;margin: 0 auto;overflow: hidden;margin: 20px;}
 #showbox li{float: left;overflow: hidden;}
 
-#floor_one{width: 1194px ;height: 570px;margin: 0 auto;border: 1px solid;}
-#floor_one .title{height: 50px;border-bottom: 1px solid red;}
+#floor_one{width: 1194px ;height: 570px;margin: 0 auto;}
+#floor_one .title{height: 50px;}
 #floor_one .title h1{font-size: 16px;width: 108px;height: 50px;line-height:50px;display: inline-block}
 #floor_one .title i{font-style:normal;font-size: 16px;float: left;display: block;width: 30px;height: 30px;line-height: 30px;text-align: center;color: #fff;margin: 10px 5px;background: url(../img/jingling-1.png) no-repeat 0 -734px ;}
 #floor_one .title ul{float: right;}
@@ -101,7 +101,7 @@
 #floor_one .title ul li a:hover{color: red;}
 #floor_one .left{float:left;width: 208px;height:520px ;background: url(../img/floor1/floor-1.jpg) no-repeat;}
 #floor_one .center{overflow:hidden;float: left;width: 810px;height: 520px;position: relative;}
-#floor_one .center .lunbo3{position: absolute;height: 520px;}
+#floor_one .center .lunbo3{position: absolute;height: 520px;width: 10000px;}
 #floor_one .center ul{width: 810px;height: 520px;float: left;}
 #floor_one .center ul li{width: 201px;height: 259px;float: left;border-bottom:1px solid #ddd;border-right: 1px solid #ddd;}
 #floor_one .center ul li .img_box{display: block;width: 160px;height: 160px;margin: 10px 20px;}
@@ -114,3 +114,26 @@
 #floor_one .right{float: right;width:176px;height: 520px;}
 #floor_one .right a{display: block;height: 259px;border-bottom: 1px solid #ddd;}
 #floor_one .right a img{width: 176px;height: 259px;}
+
+#floor_two{width: 1194px ;height: 570px;margin: 0 auto;}
+#floor_two .title{height: 50px;}
+#floor_two .title h1{font-size: 16px;width: 108px;height: 50px;line-height:50px;display: inline-block}
+#floor_two .title i{font-style:normal;font-size: 16px;float: left;display: block;width: 30px;height: 30px;line-height: 30px;text-align: center;color: #fff;margin: 10px 5px;background: url(../img/jingling-1.png) no-repeat 0 -734px ;}
+#floor_two .title ul{float: right;}
+#floor_two .title ul li{float: left;padding:15px 5px;}
+#floor_two .title ul li a:hover{color: red;}
+#floor_two .left{float:left;width: 208px;height:520px ;background: url(../img/floor1/floor-1.jpg) no-repeat;}
+#floor_two .center{overflow:hidden;float: left;width: 810px;height: 520px;position: relative;}
+#floor_two .center .lunbo3{position: absolute;height: 520px;width: 10000px;}
+#floor_two .center ul{width: 810px;height: 520px;float: left;}
+#floor_two .center ul li{width: 201px;height: 259px;float: left;border-bottom:1px solid #ddd;border-right: 1px solid #ddd;}
+#floor_two .center ul li .img_box{display: block;width: 160px;height: 160px;margin: 10px 20px;}
+#floor_two .center ul li a img{width: 160px;height: 160px;}
+#floor_two .center ul li h2{height: 40px;line-height: 15px;margin: 0 20px;}
+#floor_two .center ul li h2 a{font-size: 14px;font-weight: 400;}
+#floor_two .center .price{height: 30px;margin: 0 20px;}
+#floor_two .center b{float: left;color: #f03838;font-size: 14px;}
+#floor_two .center ul li .buy-btn {float: right;margin-top: -10px;background:url(../img/jingling-1.png) 0 -688px no-repeat;height: 36px;width: 36px;display: block;}
+#floor_two .right{float: right;width:176px;height: 520px;}
+#floor_two .right a{display: block;height: 259px;border-bottom: 1px solid #ddd;}
+#floor_two .right a img{width: 176px;height: 259px;}

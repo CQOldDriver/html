@@ -248,6 +248,8 @@
 		</div>
 		
 		<div id="floor_one">
+			
+			
 			<div class="title">
 				<h1>
 					<i>1F</i>
@@ -264,22 +266,7 @@
 			<div class="left"></div>
 			<div class="center">
 				<div class="lunbo3">
-					<script type="text/html" id="shengxian_template">
-						<% for(var i = 0,len = shengxian.length;i < len ; i++){ 
-							var prod = shengxian[i];
-						%>
-							<li>
-								<a href="#" class="img_box">
-									<img src="<%= prod.src %>"/>
-								</a>
-								<h2><a href=""><%= prod.name %></a></h2>
-								<div class="price">
-									<b><%= prod.price %></b>
-									<a href="javascript:void(0);" class="buy-btn"></a>
-								</div>
-							</li>							
-						<% } %>
-					</script>
+					
 					<ul class="shengxian_ul"></ul>
 					<ul>
 						<li>
@@ -313,7 +300,82 @@
 					<img src="../img/floor1/floor-11.png"/>
 				</a>
 			</div>
+			
+			
 		</div>
+	<!--------------------------------------------------->	
+		<div id="floor_two"></div>
+		
+		<script type="text/html" id="shengxian_template">
+			<% for(var i = 0,len = shengxian.length;i < len ; i++){ 
+				var prod = shengxian[i];
+			%>
+				<li>
+					<a href="#" class="img_box">
+						<img src="<%= prod.src %>"/>
+					</a>
+					<h2><a href=""><%= prod.name %></a></h2>
+					<div class="price">
+						<b><%= prod.price %></b>
+						<a href="javascript:void(0);" class="buy-btn"></a>
+					</div>
+				</li>							
+			<% } %>
+		</script>
+		
+		<script type="text/html" id="floor_template">
+			<div class="title">
+				<h1>
+					<i>1F</i>
+					<span>精品生鲜</span>
+				</h1>
+				<ul>
+					<li><a href="">蔬菜</a></li>
+					<li><a href="">水果</a></li>
+					<li><a href="">海鲜水产</a></li>
+					<li><a href="">肉禽蛋奶</a></li>
+					<li><a href="">日配腊味</a></li>
+				</ul>
+			</div>
+			<div class="left"></div>
+			<div class="center">
+				<div class="lunbo3">
+					<ul class="shengxian_ul"></ul>
+					<ul>
+						<li>
+							<a href="#" class="img_box">
+								<img src="../img/floor1/floor-12.jpg"/>
+							</a>
+							<h2><a href="">精装红富士900-1000克/份</a></h2>
+							<div class="price">
+								<b>￥13.20</b>
+								<a href="javascript:void(0);" class="buy-btn"></a>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="img_box">
+								<img src="../img/floor1/floor-13.jpg"/>
+							</a>
+							<h2><a href="">赣南脐橙750-850g/份</a></h2>
+							<div class="price">
+								<b>￥12.20</b>
+								<a href="javascript:void(0);" class="buy-btn"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="right">
+				<a href="#">
+					<img src="../img/floor1/floor-10.png"/>
+				</a>
+				<a href="#">
+					<img src="../img/floor1/floor-11.png"/>
+				</a>
+			</div>
+		</script>
+		
+		<!---------------------------------------------------->
 		
 		
 		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
@@ -324,7 +386,7 @@
 		<script type="text/javascript" src="../js/shopcar.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				$("#navbox .item div:nth-child(10)").hover(function(){
+				$("#navbox .item div").hover(function(){
 					$(this).parent().children(".jiadian").show();
 					$(this).css({
 						background: "red"
@@ -361,7 +423,7 @@
 				$(".login_name").text(login_test[len-1].name);
 			});
 		
-			
+		
 	
 		</script>
 	</body>
